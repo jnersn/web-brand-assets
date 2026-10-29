@@ -1,0 +1,57 @@
+{
+  "name": "web-brand-assets",
+  "version": "1.0.0",
+  "description": "Generate a website's favicons, app icons, web app manifest and share image from its logo files, rendered by headless Chrome.",
+  "keywords": [
+    "favicon",
+    "favicon.ico",
+    "apple-touch-icon",
+    "webmanifest",
+    "maskable",
+    "og-image",
+    "open-graph",
+    "share-image",
+    "headless-chrome",
+    "cli"
+  ],
+  "homepage": "https://github.com/jnersn/web-brand-assets#readme",
+  "bugs": "https://github.com/jnersn/web-brand-assets/issues",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jnersn/web-brand-assets.git"
+  },
+  "license": "MIT",
+  "author": "Janne Räisänen",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "bin": {
+    "web-brand-assets": "dist/cli.js"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "build": "rm -rf dist && tsc -p tsconfig.json && chmod +x dist/cli.js",
+    "typecheck": "tsc -p tsconfig.json --noEmit && tsc -p tsconfig.test.json --noEmit",
+    "pretest": "rm -rf .test-build && tsc -p tsconfig.test.json",
+    "test": "node --test .test-build/test/*.test.js",
+    "prepack": "npm run build"
+  },
+  "devDependencies": {
+    "@types/node": "^20.19.43",
+    "typescript": "^7.0.2"
+  }
+}

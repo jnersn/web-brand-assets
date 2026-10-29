@@ -1,0 +1,24 @@
+{
+  "name": "Example Peaks",
+  "icon": "brand/icon.svg",
+  "favicon": "brand/favicon.svg",
+  "output": "out",
+  "site_url": "https://example.com",
+  "manifest": {
+    "short_name": "Peaks",
+    "theme_color": "#1d3557",
+    "background_color": "#1d3557"
+  },
+  "maskable": {
+    "scale": 0.75
+  },
+  "share": {
+    "title": "Example Peaks",
+    "tagline": "Small tools for big hikes.",
+    "mark": "brand/mark.svg",
+    "background": "#1d3557",
+    "glow": "#a8dadc",
+    "title_color": "#f1faee",
+    "tagline_color": "#a8dadc"
+  }
+}
